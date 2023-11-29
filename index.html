@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Burger Web</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous"> 
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <!-- group 1 -->
+    <div class="container-fluid" id="group-1">
+      <div class="row pt-3">
+        <div class="col-lg-2 col-md-3 col-12 logo">
+          <img src="image/home burger logo.png" alt="" class="img-fluid">
+        </div>
+        <div class="col-lg-1 offset-lg-6 col-md-1 offset-md-3 col-2 mt-md-0 mt-4" id="contact">
+          <img src="image/Vector Smart Object.png" alt="" class="img-fluid">
+        </div>
+        <div class="col-lg-3 col-md-4 col-9 mt-md-0 mt-4" id="deliver">
+          <p>Express Delivery +91 0123456789</p>
+        </div>
+      </div>
+
+
+      <!-- menu bar for mobile -->
+      <div class="row d-flex justify-content-between" id="dont-show0">
+        <div class="col-1" id="menu-logo">
+          <i class="bi bi-list" id="menu-img" onclick="menu_bar()"></i>
+        </div>
+        <!-- cart -->
+        <header id="shop-hide">
+          <div class="shopping" id="shop-cart">
+            <i class="fa-solid fa-cart-plus" style="font-size: 30px;"></i>
+            <span class="quantity">0</span>
+          </div>
+        </header>
+      </div>
+
+      <!-- when clicked menu bar -->
+      <div class="row menu-bar" id="menu-slide">
+        <div class="col-10 offset-1">
+          <p>Home</p>
+        </div>
+        <div class="col-10 offset-1">
+          <p>Menu</p>
+        </div>
+        <div class="col-10 offset-1">
+          <p>Our Story</p>
+        </div>
+        <div class="col-10 offset-1">
+          <p>Contact Us</p>
+        </div>
+        <div class="col-10 offset-1">
+          <p id="sign-in-mob">Sign in</p>
+        </div>
+        <div class="col-10 offset-1">
+          <p id="sign-up-mob">Sign Up</p>
+        </div>
+      </div>
+
+
+      <!-- menu for pc-->
+      <div class="row" id="dont-show2">
+        <div class="col-xl-1 col-lg-2 col-md-2 offset-xl-2" id="blur-6">
+          <button id="sign-in">Sign in</button>
+        </div>
+        <div class="col-xl-1 col-lg-2 col-md-2 blur-kar" id="blur-5">
+          <button id="sign-up">Sign Up</button>
+        </div>
+        <div class="col-xl-1 col-lg-1 col-md-2 offset-md-2 offset-xl-3" id="blur-1">
+          <p>Home</p>
+        </div>
+        <div class="col-xl-1 col-lg-1 col-md-1" id="blur-2">
+          <p>Menu</p>
+        </div>
+        <div class="col-xl-1 col-lg-2 col-md-2" id="blur-3">
+          <p>Our Story</p>
+        </div>
+        <div class="col-xl-2 col-lg-2 col-md-2" id="blur-4">
+          <p id="contact-down">Contact Us</p>
+        </div>
+      </div>
+
+
+      <!-- sign in -->
+      <div class="container-fluid d-flex" id="sign-inn">
+        <form id="signInForm" class="bg-white">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required><br>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br>
+
+            <button type="button" onclick="validateSignIn()">Sign In</button>
+        </form>
+        <button id="cross-btnX"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+
+      <!-- sign up -->
+      <div class="container-fluid" id="sign-up-cont">
+        <form id="signupForm" class="bg-white">
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" required>
+  
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+  
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required>
+  
+          <label for="confirmPassword">Confirm Password:</label>
+          <input type="password" id="confirmPassword" name="confirmPassword" required>
+  
+          <button type="button" onclick="validateForm1()">Sign Up</button>
+        </form>
+        <button id="cross-btn2"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+
+
+
+      <!-- burger part -->
+      <div class="row" id="blurring">
+        <div class="col-lg-5 col-md-6">
+          <div class="row text-lg-start text-center" id="left-side">
+            <div class="col-lg-auto offset-lg-1" style="color: rgb(86, 18, 18);">
+              <p>IT IS A GOOD TIME FOR THE GREAT TASTE OF BURGERS</p>
+            </div>
+            <div class="col-lg-10 offset-lg-1">
+              <h1>BURGER</h1>
+            </div>
+            <div class="col-lg-10 offset-lg-1">
+              <h3>WEEK</h3>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-7 col-md-6" id="burger1">
+          <img src="image/Image-1.png" alt="" class="img-fluid">
+          <h1>&#8377 299</h1>
+          <h1>ONLY</h1>
+          <img src="image/Design.png" alt="" class="img-fluid" id="moneydgn">
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- group 2 -->
+    <div class="container-fluid mt-md-5 mt-3 mb-md-5 mb-3">
+      <div class="row d-flex justify-content-evenly">
+        <div class="col-md-5">
+          <div class="row" id="relative-1">
+            <div class="col-12">
+              <img src="image/Burger Image 1.png" alt="" class="img-fluid">
+            </div>
+            <div class="col-10 offset-1" id="one1">
+              <p class="margin-b try-it-t">TRY IT TODAY</p>
+              <p class="popular">MOST POPULAR BURGER</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-5 mt-md-0 mt-3">
+          <div class="row" id="relative-2">
+            <div class="col-12">
+              <img src="image/burger image 2.png" alt="" class="img-fluid">
+            </div>
+            <div class="col-10 d-flex flex-column justify-content-center offset-1" id="two1">
+              <p class="margin-b try-it-t">TRY IT TODAY</p>
+              <p class="margin-b popular">MORE FUN</p>
+              <p class="popular">MORE TASTE</p>
+            </div>
+          </div>
+
+          <div class="row mt-md-4 mt-3" id="relative-3">
+            <div class="col-12">
+              <img src="image/burger image3.png" alt="" class="img-fluid">
+            </div>
+            <div class="col-10 d-flex flex-column justify-content-center offset-1" id="three1">
+              <p class="margin-b try-it-t">TRY IT TODAY</p>
+              <P class="popular">FRESH & CHILI</P>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+    <!-- group 3 -->
+    <!-- always tasty burger -->
+    <div class="container-fluid">
+      <div class="row d-flex flex-column justify-content-center align-items-center">
+        <div class="col-auto" id="always-tasty">
+          <h6>ALWAYS TASTY BURGER</h6>
+        </div>
+        <div class="col-auto mt-3" id="choose-enj">
+          <h1>CHOOSE & ENJOY</h1>
+        </div>
+        <div class="col-auto text-center mt-3">
+          <p>"I'm not a veggie, but I'm feeling extra 'beef-icient' with this burger."</p>
+          <p>"Feeling like a 'patty-cularly' happy camper with this burger."</p>
+          <p>"Ketchup with me and let's have a 'relish'-ing burger time."</p>
+          <p>"Cheese it up! This burger is 'grate'!"</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- group 3 -->
+    <!-- 3 burger -->
+    <div class="container-fluid mt-3">
+      <div class="row" id="pic">
+        <div class="col-sm-4 mt-4 slide text-center">
+          <img src="image/burger-slide-1.png" alt="" class="img-fluid">
+          <img src="image/Shadow.png" alt="" class="img-fluid">
+          <p class="hide-10">A burger is a work of art that satisfies both hunger and soul.</p>
+          <h1 style="text-decoration: underline;" class="mt-5 hide-10">MENU</h1>
+        </div>
+        <div class="col-sm-4 slide text-center">
+          <img src="image/burger-slide-2.png" alt="" class="img-fluid">
+          <img src="image/Shadow.png" alt="" class="img-fluid">
+          <p>A burger is a work of art that satisfies both hunger and soul.</p>
+          <h1 style="text-decoration: underline;" class="mt-5">MENU</h1>
+        </div>
+        <div class="col-sm-4 mt-2 slide text-center">
+          <img src="image/Burger21.png" alt="" class="img-fluid">
+          <img src="image/Shadow.png" alt="" class="img-fluid">
+          <p class="hide-10">A burger is a work of art that satisfies both hunger and soul.</p>
+          <h1 style="text-decoration: underline;" class="mt-5 hide-10">MENU</h1>
+        </div>
+
+        <!-- more burger -->
+        <!-- <div class="col-sm-4 mt-5 slide text-center">
+          <img src="image/burger22.png" alt="" class="img-fluid">
+          <img src="image/Shadow.png" alt="" class="img-fluid">
+          <h1>CHICKEN BURGER</h1>
+          <p>STARTS FROM</p>
+          <p>&#8377 399</p>
+          <h6 class="order-now">ORDER NOW</h6>
+        </div>
+        <div class="col-sm-4 mt-5 slide text-center" style="margin-top: 5rem !important;">
+          <img src="image/burger23.png" alt="" class="img-fluid">
+          <img src="image/Shadow.png" alt="" class="img-fluid">
+          <h1>SPICY BURGER</h1>
+          <p>STARTS FROM</p>
+          <p>&#8377 199</p>
+          <h6 class="order-now">ORDER NOW</h6>
+        </div>
+        <div class="col-sm-4 mt-3 slide text-center">
+          <img src="image/burger24.png" alt="" class="img-fluid">
+          <img src="image/Shadow.png" alt="" class="img-fluid">
+          <h1>LEAF BURGER</h1>
+          <p>STARTS FROM</p>
+          <p>&#8377 159</p>
+          <h6 class="order-now">ORDER NOW</h6>
+        </div> -->
+      </div>
+    </div>
+
+    <!-- left right btn for  -->
+    <div class="container-fluid" id="arrow-btn">
+      <div class="row">
+        <div class="col-auto arrow" id="previous" onclick="controller(-1)">
+          <i class="fa-solid fa-angles-left"></i>
+        </div>
+        <div class="col-auto offset-auto arrow" id="next" onclick="controller(1)">
+          <i class="fa-solid fa-angles-right"></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- /////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- cart -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="list">
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h1>Wishlist</h1>
+      <ul class="listCard">
+      </ul>
+      <div class="checkOut">
+          <div class="total">0</div>
+          <div class="closeShopping">Close</div>
+      </div>
+    </div>
+
+    
+    <!-- group 4 -->
+    <div class="container-fluid mt-md-5 mt-4 mb-5" id="grp-4">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="row text-md-start text-center mt-4">
+            <div class="col-12">
+              <h3>DISCOVER</h3>
+            </div>
+            <div class="col-12">
+              <h1>UPCOMING EVENTS</h1>
+            </div>
+            <div class="col-12">
+              <p>The Burger Company is one of the fastest growing modern casual dining burger chain founded by CSE Group B. Burger House Offers a unique Desi twist to American cuisine that every Indian can relate to. The burger company has been a trend setter when it comes to product innovation, from launching burgers inspired by local Indian dishes & flavours like vada pao, makhani gravy, tandoori chicken etc. to using innovative and trendy serve ware for the coolers & milkshakes presentation.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mb-3">
+          <img src="image/upcoming.png" alt="" class="img-fluid">
+        </div>
+      </div>
+    </div>
+
+    <!-- group 5 -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-6">
+          <img src="image/moble-botle.png" alt="" class="img-fluid" id="hide-3">
+        </div>
+        <div class="col-6">
+          <img src="image/moble-burgerr.png" alt="" class="img-fluid" id="hide-4">
+        </div>
+        <div class="col-sm-2" id="hide-1">
+          <img src="image/grp-5-1.png" alt="" class="img-fluid">
+          <img src="image/Bottle.png" alt="" class="img-fluid">
+        </div>
+        <div class="col-sm-8 pt-sm-5">
+          <h3 class="text-center" style="font-weight: bold;">RESERVATION</h3>
+          <h1 class="text-center" style="font-weight: bolder;">BOOK YOUR TABLE</h1>
+          <div class="row mt-5">
+            <div class="col-sm-6">
+              <input class="form-control form-control-lg" type="text" placeholder="NAME" aria-label=".form-control-lg example" style="border: 2px solid black;">
+            </div>
+            <div class="col-sm-6">
+              <input class="form-control form-control-lg mt-4 mt-sm-0" type="email" placeholder="EMAIL" aria-label=".form-control-lg example" style="border: 2px solid black;">
+            </div>
+            <div class="col-sm-6 mt-4">
+              <input type="date" style="width: 100%;" class="form-control-lg">
+            </div>
+            <div class="col-sm-6 mt-4">
+              <input type="time" style="width: 100%;" class="form-control-lg">
+            </div>
+            <div class="col-sm-6 mt-4">
+              <input type="number" placeholder="NUMBER OF PEOPLE" style="width: 100%;" class="form-control-lg">
+            </div>
+            <div class="col-sm-6 mt-4 text-center text-white pt-2 col-6 offset-3" style="background-color: red;border-radius: 8px;cursor: pointer;">
+              <h3>FIND A TABLE</h3>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-2" id="hide-2">
+          <img src="image/grp-5-3.png" alt="" class="img-fluid">
+        </div>
+      </div>
+    </div>
+
+    <!-- back to top -->
+    <div class="container-fluid mt-4" style="background-color: #ffc64d;font-weight: bolder;cursor: pointer;">
+      <div class="row pt-3 pb-2">
+        <div class="col-12 text-center" onclick="topFunction()">
+          <h3>BACK TO TOP</h3>
+        </div>
+      </div>
+    </div>
+
+    <!-- group 6 footer -->
+    <div class="container-fluid mt-sm-5 mt-4 pt-sm-5 pt-4 pb-3 text-sm-start text-center" id="foot-bg">
+      <div class="row">
+        <div class="col-md-6 col-sm-5 text-white">
+          <img src="image/footer-logo.png" alt="" class="img-fluid">
+          <p class="mt-3">The Burger Company is one of the fastest growing modern casual dining burger chain founded by Biswanath Basumatary. Burger House Offers a unique Desi twist to American cuisine that every Indian can relate to.</p>
+        </div>
+        <div class="col-md-4 col-sm-auto text-white offset-md-2">
+          <span><i class="fa-solid fa-location-dot"></i></span>
+          <span>KOKRAJHAR, ASSAM, INDIA</span>
+          <p><i class="fa-solid fa-envelope"></i>
+            <span>biswanathbasumatary864@gmail.com</span></p>
+        </div>
+        <div class="col-sm-5 text-white">
+          <p>&copy; BWN 2023 ALL RIGHTS RESERVED</p>
+        </div>
+        <div class="col-lg-2 offset-lg-5 col-sm-4 offset-sm-3" id="icons">
+          <a href="https://instagram.com/bwn.bsty?igshid=MzMyNGUyNmU2YQ=="  target="_blank"><i class="fa-brands fa-instagram text-white"></i></a>....
+          <a href="https://www.facebook.com/bwn.bsty.7?mibextid=ZbWKwL" target="_blank"><i class="fa-brands fa-facebook text-white"></i></a>....
+          <i class="fa-brands fa-twitter text-white"></i>....
+          <a href="" target="_blank"><i class="fa-brands fa-whatsapp text-white"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script> -->
+    <script src="script.js"></script>
+  </body>
+</html>
